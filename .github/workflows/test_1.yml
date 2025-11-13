@@ -1,6 +1,6 @@
 name: Hola Mundo
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   hola:
@@ -22,6 +22,7 @@ jobs:
 
   other:
     runs-on: ubuntu-latest
+    #Es para conectar dos o más jobs
     needs: [hola]
     steps:
       - name: LS
