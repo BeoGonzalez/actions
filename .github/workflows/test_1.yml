@@ -43,6 +43,9 @@ jobs:
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v4.0.3
+        # with para paserle parametros al action que se encuentra en el uses
+        with:
+            node-version: latest
 
       - name: node version
         run: node --version
