@@ -1,6 +1,12 @@
 name: Hola Mundo
-
-on: [push, pull_request]
+# Trigges o disparadores
+on: 
+  push:
+    branches:
+        - main
+  pull_request:
+    branches:
+        - main
 
 jobs:
   hola:
@@ -25,5 +31,7 @@ jobs:
     #Es para conectar dos o más jobs
     needs: [hola]
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.7
       - name: LS
         run: ls -al
