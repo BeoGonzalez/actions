@@ -28,7 +28,7 @@ jobs:
 
   other:
     runs-on: ubuntu-latest
-    #Es para conectar dos o más jobs
+    #Es para conectar dos o más jobs, primero se ejecuta el nombre del job declarado y luego el segundo job.
     needs: [hola]
     steps:
       - name: Checkout

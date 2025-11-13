@@ -1,0 +1,11 @@
+name: Test
+
+on: [push]
+
+jobs:
+  test_build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ls
+        run: ls -al
