@@ -56,3 +56,23 @@ jobs:
             php-version: '8.3'
       - name: node version
         run: php --version
+  #Este say hello es otro nombre de otro jobs
+  say-hello:
+    runs-on: ubuntu-latest
+
+    services:
+      mysql:
+        image: msql:5.7
+        env:
+          MYSQL_ROOT_PASSWORD: example
+        ports:
+          - 3306:3306
+      redis:
+        image: redis
+        ports:
+          - 6379:6379
+
+    steps:
+      - name: Test
+        run: ls
+        
