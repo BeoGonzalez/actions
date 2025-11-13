@@ -1,0 +1,12 @@
+name: "My action"
+description: "Test my action"
+
+runs:
+  # composite es para agrupar pasos "steps" comunes reutilizables
+  using: "composite"
+
+  steps:
+    - name: Hola Mundo
+      run: echo "Hola Mundo"
+      #Shell se importa en el yml normal y no en el workflow
+      shell: bash
